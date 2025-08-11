@@ -22,15 +22,19 @@ jobs:
       run: cd diego-dash-system
     
     - name: Install dependencies
+      working-directory: ./diego-dash-system
       run: npm ci
     
     - name: Run linter
+      working-directory: ./diego-dash-system
       run: npm run lint
     
     - name: Build application
+      working-directory: ./diego-dash-system
       run: npm run build
     
     - name: Test Build
+      working-directory: ./diego-dash-system
       run: |
         echo "? Build realizado com sucesso!"
         echo "?? Arquivos gerados:"
