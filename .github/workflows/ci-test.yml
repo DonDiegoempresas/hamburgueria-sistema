@@ -18,8 +18,13 @@ jobs:
         node-version: '20'
         cache: 'npm'
     
-    - name: Change to project directory
-      run: cd diego-dash-system
+    - name: List directory structure
+      run: |
+        echo "?? Estrutura do repositório:"
+        pwd
+        ls -la
+        echo "?? Conteúdo da pasta atual:"
+        ls -la */
     
     - name: Install dependencies
       working-directory: ./diego-dash-system
